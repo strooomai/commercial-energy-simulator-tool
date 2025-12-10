@@ -4,7 +4,7 @@
  * Supports light and dark themes
  */
 
-import React, { createContext, useContext, useState, useCallback, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect, ReactNode } from 'react';
 
 export type Language = 'nl' | 'en';
 export type Theme = 'light' | 'dark';

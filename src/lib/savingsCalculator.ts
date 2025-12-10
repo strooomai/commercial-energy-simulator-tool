@@ -10,6 +10,8 @@ import {
   HeatPumpModel,
   SavingsResult,
 } from '../types/schema';
+
+export type { SavingsResult } from '../types/schema';
 import { HeatDemandResult } from './heatDemandCalculator';
 
 export interface SavingsInput {

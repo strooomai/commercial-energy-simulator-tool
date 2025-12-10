@@ -3,7 +3,7 @@
  * Visualizes combined load, HP profile, and grid connection limit
  */
 
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { CombinedLoadPoint } from '../lib/peakAnalyzer';
 
 interface LoadChartProps {
@@ -20,7 +20,7 @@ export function LoadChart({
   connectionLimitKw,
   showBuilding = true,
   showHP = true,
-  showSteered = false,
+  showSteered: _showSteered = false,
   height = 300,
 }: LoadChartProps) {
   // Aggregate data for display (show daily averages for year view)

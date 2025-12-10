@@ -2,7 +2,7 @@
  * Screen 3: Piekbelasting Analyse (Peak Load Analysis) Page
  */
 
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { Card, Button, StatCard, Alert, Table, ToggleGroup, Badge } from './ui';
 import {
   ManualEnergyData,
@@ -12,11 +12,11 @@ import {
 import { HeatDemandResult } from '../lib/heatDemandCalculator';
 import { SavingsResult } from '../lib/savingsCalculator';
 import { HPSelectionOutput } from '../lib/hpSelectorEngine';
-import { analyzePeakLoad, mergeLoads, PeakLoadResult } from '../lib/peakAnalyzer';
-import { correlateTemperatures, TemperatureAtExceedances } from '../lib/temperatureCorrelator';
-import { calculateSaldering, SalderingAnalysis } from '../lib/salderingCalculator';
-import { calculateDynamicPricing, DynamicPricingAnalysis } from '../lib/dynamicPricingEngine';
-import { applySmartSteering, SmartSteeringOutput } from '../lib/smartSteeringEngine';
+import { analyzePeakLoad, mergeLoads } from '../lib/peakAnalyzer';
+import { correlateTemperatures } from '../lib/temperatureCorrelator';
+import { calculateSaldering } from '../lib/salderingCalculator';
+import { calculateDynamicPricing } from '../lib/dynamicPricingEngine';
+import { applySmartSteering } from '../lib/smartSteeringEngine';
 import { generateSyntheticHPProfile } from '../lib/syntheticProfileGenerator';
 import { generateProfile } from '../lib/profileGenerator';
 import { useTranslation } from '../lib/i18n';
@@ -38,7 +38,7 @@ export function PiekbelastingPage({
   heatDemand,
   selectedModel,
   selectedUnits,
-  savings,
+  savings: _savings,
   selection,
   onBack,
 }: PiekbelastingPageProps) {

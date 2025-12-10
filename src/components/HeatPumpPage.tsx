@@ -2,15 +2,14 @@
  * Screen 2: Warmtepomp Selectie (Heat Pump Selection) Page
  */
 
-import React, { useState, useEffect, useMemo } from 'react';
-import { Card, Button, Select, Table, StatCard, Alert, Badge } from './ui';
+import { useState, useEffect, useMemo } from 'react';
+import { Card, Button, Table, StatCard, Alert, Badge } from './ui';
 import {
   ManualEnergyData,
   HeatPumpModel,
   bivalentPointConfig,
   BivalentPointId,
   HPSelectorResult,
-  heatPumpModels,
 } from '../types/schema';
 import { HeatDemandResult } from '../lib/heatDemandCalculator';
 import { selectHeatPump, HPSelectionOutput } from '../lib/hpSelectorEngine';

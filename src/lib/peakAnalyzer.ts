@@ -11,6 +11,8 @@ import {
   HeatPumpProfileDataPoint,
 } from '../types/schema';
 
+export type { PeakLoadResult } from '../types/schema';
+
 export interface CombinedLoadPoint {
   timestamp: Date;
   buildingLoadKw: number;
@@ -131,7 +133,7 @@ export function findExceedanceEvents(
   const events: ExceedanceEvent[] = [];
   let currentEvent: ExceedanceEvent | null = null;
   
-  combinedLoad.forEach((point, index) => {
+  combinedLoad.forEach((point) => {
     if (point.isExceedance) {
       if (!currentEvent) {
         // Start new event

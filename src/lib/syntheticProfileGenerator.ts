@@ -20,8 +20,6 @@ export interface SyntheticProfileInput {
 }
 
 // Design outdoor temperature for Netherlands
-const DESIGN_OUTDOOR_TEMP = -10; // °C
-const INDOOR_TEMP = 20; // °C
 const BASE_TEMP = 15; // °C - below this, heating is needed
 
 /**

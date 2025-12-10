@@ -2,7 +2,7 @@
  * Energy Simulator Tool - Main Application
  */
 
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { Navigation, SummaryBar } from './components/Navigation';
 import { EnergyDataPage } from './components/EnergyDataPage';
 import { HeatPumpPage } from './components/HeatPumpPage';

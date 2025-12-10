@@ -3,14 +3,13 @@
  * Centralized store for energy simulator data
  */
 
-import React, { createContext, useContext, useReducer, ReactNode } from 'react';
+import { createContext, useContext, useReducer, ReactNode } from 'react';
 import {
   ManualEnergyData,
   ProcessedEnergyData,
   HeatPumpProfile,
   HeatPumpModel,
   PriceTempDataPoint,
-  GridConnectionId,
   BivalentPointId,
 } from '../types/schema';
 import { HeatDemandResult } from '../lib/heatDemandCalculator';
